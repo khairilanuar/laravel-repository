@@ -1,6 +1,14 @@
-# Laravel 5 Repositories
+# Laravel Repositories
 
-Laravel 5 Repositories is used to abstract the data layer, making our application more flexible to maintain.
+**Important Note:** This project is a fork of the famous (and abandoned) http://andersonandra.de/l5-repository/ with a high hope to become 
+the actively maintained source. You are welcome to colloborate and submit your pull request here.
+
+Laravel Repositories is used to abstract the data layer, making our application more flexible to maintain.
+
+This fork is aimed only to Laravel version 5.5 <=, so if you are on older version of Laravel you can either; use the 
+package from the original source or consider to update your application to latest version of Laravel. I strongly suggest 
+the later option.  
+ 
 
 [![Latest Stable Version](https://poser.pugx.org/prettus/l5-repository/v/stable)](https://packagist.org/packages/prettus/l5-repository) [![Total Downloads](https://poser.pugx.org/prettus/l5-repository/downloads)](https://packagist.org/packages/prettus/l5-repository) [![Latest Unstable Version](https://poser.pugx.org/prettus/l5-repository/v/unstable)](https://packagist.org/packages/prettus/l5-repository) [![License](https://poser.pugx.org/prettus/l5-repository/license)](https://packagist.org/packages/prettus/l5-repository)
 [![Analytics](https://ga-beacon.appspot.com/UA-61050740-1/l5-repository/readme)](https://packagist.org/packages/prettus/l5-repository)
@@ -48,10 +56,29 @@ You want to know a little more about the Repository pattern? [Read this great ar
 
 ### Composer
 
+Add the following repositories to your project's `composer.json`
+
+```terminal
+...
+"repositories": [
+    {
+        "type": "git",
+        "url": "https://github.com/khairilanuar/laravel-repository.git"
+    },
+    {
+        "type": "git",
+        "url": "https://github.com/khairilanuar/laravel-validator.git"
+    }
+],
+"require": {
+...
+
+```
+
 Execute the following command to get the latest version of the package:
 
 ```terminal
-composer require prettus/l5-repository
+composer require infinitum/laravel-repository:dev-master
 ```
 
 ### Laravel
@@ -61,15 +88,6 @@ composer require prettus/l5-repository
 ServiceProvider will be attached automatically
 
 #### Other
-
-In your `config/app.php` add `Prettus\Repository\Providers\RepositoryServiceProvider::class` to the end of the `providers` array:
-
-```php
-'providers' => [
-    ...
-    Prettus\Repository\Providers\RepositoryServiceProvider::class,
-],
-```
 
 If Lumen
 
